@@ -2327,3 +2327,6 @@
 108.34.151.220 - - [29/Jun/2014:12:50:40] "GET /polls/ HTTP/1.0" 200 None "-" "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:29.0) Gecko/20100101 Firefox/29.0"
 108.34.151.220 - - [29/Jun/2014:12:59:54] "GET /polls/ HTTP/1.0" 200 None "-" "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:29.0) Gecko/20100101 Firefox/29.0"
 108.34.151.220 - - [29/Jun/2014:13:01:32] "GET /polls/ HTTP/1.0" 200 None "-" "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:29.0) Gecko/20100101 Firefox/29.0"
+108.34.151.220 - - [30/Jun/2014:22:44:00] "GET / HTTP/1.0" 200 None "-" "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:29.0) Gecko/20100101 Firefox/29.0"
+108.34.151.220 - - [30/Jun/2014:22:44:07] "GET /polls HTTP/1.0" 301 None "-" "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:29.0) Gecko/20100101 Firefox/29.0"
+108.34.151.220 - - [30/Jun/2014:22:44:08] "GET /polls/ HTTP/1.0" 200 None "-" "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:29.0) Gecko/20100101 Firefox/29.0"

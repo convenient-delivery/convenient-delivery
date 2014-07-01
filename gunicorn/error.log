@@ -12400,3 +12400,97 @@ ImportError: No module named convenient_delivery.wsgi
 2014-06-29 18:01:27 [7537] [INFO] Booting worker with pid: 7537
 2014-06-29 18:01:27 [7538] [INFO] Booting worker with pid: 7538
 2014-06-29 18:01:31 [7536] [DEBUG] GET /polls/
+2014-07-01 03:43:54 [30758] [DEBUG] Current configuration:
+2014-07-01 03:43:54 [30758] [DEBUG]   access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+2014-07-01 03:43:54 [30758] [DEBUG]   accesslog: /home/convenient/Django/convenient_delivery/gunicorn/access.log
+2014-07-01 03:43:54 [30758] [DEBUG]   backlog: 2048
+2014-07-01 03:43:54 [30758] [DEBUG]   bind: 127.0.0.1:8005
+2014-07-01 03:43:54 [30758] [DEBUG]   config: /home/convenient/Django/convenient_delivery/gunicorn.py
+2014-07-01 03:43:54 [30758] [DEBUG]   daemon: False
+2014-07-01 03:43:54 [30758] [DEBUG]   debug: True
+2014-07-01 03:43:54 [30758] [DEBUG]   default_proc_name: convenient_delivery.wsgi:application
+2014-07-01 03:43:54 [30758] [DEBUG]   errorlog: /home/convenient/Django/convenient_delivery/gunicorn/error.log
+2014-07-01 03:43:54 [30758] [DEBUG]   group: 1000
+2014-07-01 03:43:54 [30758] [DEBUG]   keepalive: 2
+2014-07-01 03:43:54 [30758] [DEBUG]   logger_class: simple
+2014-07-01 03:43:54 [30758] [DEBUG]   loglevel: debug
+2014-07-01 03:43:54 [30758] [DEBUG]   max_requests: 0
+2014-07-01 03:43:54 [30758] [DEBUG]   on_reload: <function on_reload at 0x1f798c0>
+2014-07-01 03:43:54 [30758] [DEBUG]   on_starting: <function on_starting at 0x1f79758>
+2014-07-01 03:43:54 [30758] [DEBUG]   pidfile: None
+2014-07-01 03:43:54 [30758] [DEBUG]   post_fork: <function post_fork at 0x1f79cf8>
+2014-07-01 03:43:54 [30758] [DEBUG]   post_request: <function post_request at 0x1f7d140>
+2014-07-01 03:43:54 [30758] [DEBUG]   pre_exec: <function pre_exec at 0x1f79e60>
+2014-07-01 03:43:54 [30758] [DEBUG]   pre_fork: <function pre_fork at 0x1f79b90>
+2014-07-01 03:43:54 [30758] [DEBUG]   pre_request: <function pre_request at 0x1f7d050>
+2014-07-01 03:43:54 [30758] [DEBUG]   preload_app: False
+2014-07-01 03:43:54 [30758] [DEBUG]   proc_name: None
+2014-07-01 03:43:54 [30758] [DEBUG]   secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+2014-07-01 03:43:54 [30758] [DEBUG]   spew: False
+2014-07-01 03:43:54 [30758] [DEBUG]   timeout: 30
+2014-07-01 03:43:54 [30758] [DEBUG]   tmp_upload_dir: None
+2014-07-01 03:43:54 [30758] [DEBUG]   umask: 0
+2014-07-01 03:43:54 [30758] [DEBUG]   user: 1000
+2014-07-01 03:43:54 [30758] [DEBUG]   when_ready: <function start_server at 0x1f79a28>
+2014-07-01 03:43:54 [30758] [DEBUG]   worker_class: sync
+2014-07-01 03:43:54 [30758] [DEBUG]   worker_connections: 1000
+2014-07-01 03:43:54 [30758] [DEBUG]   worker_exit: <function worker_exit at 0x1f7d2a8>
+2014-07-01 03:43:54 [30758] [DEBUG]   workers: 3
+2014-07-01 03:43:54 [30758] [INFO] Starting gunicorn 0.13.4
+2014-07-01 03:43:54 [30758] [DEBUG] Arbiter booted
+2014-07-01 03:43:54 [30758] [INFO] Listening at: http://127.0.0.1:8005 (30758)
+2014-07-01 03:43:54 [30758] [INFO] Using worker: sync
+2014-07-01 03:43:54 [30761] [INFO] Booting worker with pid: 30761
+2014-07-01 03:43:54 [30762] [INFO] Booting worker with pid: 30762
+2014-07-01 03:43:54 [30763] [INFO] Booting worker with pid: 30763
+2014-07-01 03:43:59 [30762] [DEBUG] GET /
+2014-07-01 03:44:07 [30763] [DEBUG] GET /polls
+2014-06-30 22:44:08 [30762] [DEBUG] GET /polls/
+2014-07-01 03:45:04 [30758] [INFO] Handling signal: term
+2014-07-01 03:45:04 [30761] [INFO] Worker exiting (pid: 30761)
+2014-06-30 22:45:04 [30762] [INFO] Worker exiting (pid: 30762)
+2014-06-30 22:45:04 [30763] [INFO] Worker exiting (pid: 30763)
+2014-07-01 03:45:04 [30758] [INFO] Shutting down: Master
+2014-07-01 03:45:05 [31283] [DEBUG] Current configuration:
+2014-07-01 03:45:05 [31283] [DEBUG]   access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+2014-07-01 03:45:05 [31283] [DEBUG]   accesslog: /home/convenient/Django/convenient_delivery/gunicorn/access.log
+2014-07-01 03:45:05 [31283] [DEBUG]   backlog: 2048
+2014-07-01 03:45:05 [31283] [DEBUG]   bind: 127.0.0.1:8005
+2014-07-01 03:45:05 [31283] [DEBUG]   config: /home/convenient/Django/convenient_delivery/gunicorn.py
+2014-07-01 03:45:05 [31283] [DEBUG]   daemon: False
+2014-07-01 03:45:05 [31283] [DEBUG]   debug: True
+2014-07-01 03:45:05 [31283] [DEBUG]   default_proc_name: convenient_delivery.wsgi:application
+2014-07-01 03:45:05 [31283] [DEBUG]   errorlog: /home/convenient/Django/convenient_delivery/gunicorn/error.log
+2014-07-01 03:45:05 [31283] [DEBUG]   group: 1000
+2014-07-01 03:45:05 [31283] [DEBUG]   keepalive: 2
+2014-07-01 03:45:05 [31283] [DEBUG]   logger_class: simple
+2014-07-01 03:45:05 [31283] [DEBUG]   loglevel: debug
+2014-07-01 03:45:05 [31283] [DEBUG]   max_requests: 0
+2014-07-01 03:45:05 [31283] [DEBUG]   on_reload: <function on_reload at 0x2b908c0>
+2014-07-01 03:45:05 [31283] [DEBUG]   on_starting: <function on_starting at 0x2b90758>
+2014-07-01 03:45:05 [31283] [DEBUG]   pidfile: None
+2014-07-01 03:45:05 [31283] [DEBUG]   post_fork: <function post_fork at 0x2b90cf8>
+2014-07-01 03:45:05 [31283] [DEBUG]   post_request: <function post_request at 0x2b94140>
+2014-07-01 03:45:05 [31283] [DEBUG]   pre_exec: <function pre_exec at 0x2b90e60>
+2014-07-01 03:45:05 [31283] [DEBUG]   pre_fork: <function pre_fork at 0x2b90b90>
+2014-07-01 03:45:05 [31283] [DEBUG]   pre_request: <function pre_request at 0x2b94050>
+2014-07-01 03:45:05 [31283] [DEBUG]   preload_app: False
+2014-07-01 03:45:05 [31283] [DEBUG]   proc_name: None
+2014-07-01 03:45:05 [31283] [DEBUG]   secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+2014-07-01 03:45:05 [31283] [DEBUG]   spew: False
+2014-07-01 03:45:05 [31283] [DEBUG]   timeout: 30
+2014-07-01 03:45:05 [31283] [DEBUG]   tmp_upload_dir: None
+2014-07-01 03:45:05 [31283] [DEBUG]   umask: 0
+2014-07-01 03:45:05 [31283] [DEBUG]   user: 1000
+2014-07-01 03:45:05 [31283] [DEBUG]   when_ready: <function start_server at 0x2b90a28>
+2014-07-01 03:45:05 [31283] [DEBUG]   worker_class: sync
+2014-07-01 03:45:05 [31283] [DEBUG]   worker_connections: 1000
+2014-07-01 03:45:05 [31283] [DEBUG]   worker_exit: <function worker_exit at 0x2b942a8>
+2014-07-01 03:45:05 [31283] [DEBUG]   workers: 3
+2014-07-01 03:45:05 [31283] [INFO] Starting gunicorn 0.13.4
+2014-07-01 03:45:05 [31283] [DEBUG] Arbiter booted
+2014-07-01 03:45:05 [31283] [INFO] Listening at: http://127.0.0.1:8005 (31283)
+2014-07-01 03:45:05 [31283] [INFO] Using worker: sync
+2014-07-01 03:45:05 [31286] [INFO] Booting worker with pid: 31286
+2014-07-01 03:45:05 [31287] [INFO] Booting worker with pid: 31287
+2014-07-01 03:45:05 [31288] [INFO] Booting worker with pid: 31288

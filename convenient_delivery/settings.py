@@ -35,13 +35,25 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'order_processor',
+    'registration',
     'polls',
 )
+#Registration settings  
+ACCOUNT_ACTIVATION_DAYS = 7
+
+EMAIL_HOST='smtp.gmail.com'
+
+EMAIL_PORT = '465'
+
+EMAIL_HOST_USER = 'convenientdelivery132'
+
+EMAIL_HOST_PASSWORD = 'hello132'
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -84,9 +96,9 @@ USE_L10N = True
 USE_TZ = True
 
 #Security Settings
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SESSION_EXPIRE_AT_BROWSER_CLOSE=True
+#SESSION_COOKIE_SECURE = True
+#CSRF_COOKIE_SECURE = True
+#SESSION_EXPIRE_AT_BROWSER_CLOSE=True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/

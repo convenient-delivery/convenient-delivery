@@ -34,7 +34,7 @@ class CategoryAdmin(admin.ModelAdmin):
    
 class UserAdmin(AuthUserAdmin):
 	inlines = [DriverInline,ProfileInline]
-#class StoreAdmin(admin.ModelAdmin):
+#class CityAdmin(admin.ModelAdmin):
 	
 
 # unregister old user admin
@@ -44,7 +44,7 @@ admin.site.register(User, UserAdmin)
 
 
 # Register your models here.
-admin.site.register(Store)
+admin.site.register(City)
 admin.site.register(Profile)
 admin.site.register(Establishment, EstablishmentAdmin)
 admin.site.register(ItemCategory, CategoryAdmin)

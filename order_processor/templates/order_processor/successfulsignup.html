@@ -1,0 +1,13 @@
+{% include "order_processor/header.html" %}
+<p> 
+  Welcome {{ first_name }} {{ last_name }}, account successfully created with the following attributes:
+  <ul>
+    <li>Username: {{ username }}</li>
+    <li>Email Adress: {{ email }}</li>
+  </ul></ br>
+  Press the button below to go back to the main page!
+  <form action = "{% url 'index' %}">
+    <input type="submit" Value ="Home" class= "btn btn-default btn-large">
+  </form>
+</p>
+{% include "order_processor/footer.html" %}

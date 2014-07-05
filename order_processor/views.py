@@ -2,21 +2,22 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import RequestContext, loader
-from order_processor.models import Store, Establishment
+from order_processor.models import City, Establishment
 from order_processor import forms
 from django.views.decorators.csrf import csrf_exempt
-from django.contrib.auth import authenticate, login 
+from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.contrib.auth.models import User, Group
+from django.contrib.auth.forms import AuthenticationForm
 
 def index(request):
   #output = "test output"
   
-  store_selector = forms.StoreSelect()
+  store_selector = forms.CitySelect()
   login = forms.login()
   
   context = {
               'store_select' : store_selector,
-             'login' : login,
+              'login' : login,
             }
   return render(request, 'order_processor/index.html', context)
 
@@ -24,7 +25,7 @@ def index(request):
 def order(request):
   context = {}
   if request.method == 'POST':
-    store_selector = forms.StoreSelect(request.POST)
+    store_selector = forms.CitySelect(request.POST)
 
   else:
     return redirect('index')  
@@ -33,22 +34,28 @@ def order(request):
 
   return render(request, 'order_processor/order.html', context)
 
-@csrf_exempt  
-def driver(request):
-  context = {}
-  username = request.POST['username'] 
-  password = request.POST['password']
-  user = authenticate(username=username, password=password)
-  if user is not None:
-    if user.is_active:
-      login(request, user)
-      return redirect('driver')
-    else:
-      return redirect('index')
+def login(request):
+  if request.user.is_authenticated():
+    first_name = request.user.first_name
+    last_name = request.user.last_name
+    context = {
+                'first_name' : first_name,
+                'last_name' : last_name,
+              }
+    return render(request, 'order_processor/alreadyloggedin.html', context)
   else:
-    return redirect('index')
-
-@csrf_exempt  
+    authenticationForm = AuthenticationForm()
+  
+    context = {
+              'authenticationForm': authenticationForm,
+             }
+    return render (request, 'order_processor/login.html', context)
+ 
+def logout(request):
+  auth_logout(request)
+  context = {}
+  return render(request, 'order_processor/logout.html', context)
+ 
 def signup(request):
   signup = forms.signup()
 
@@ -57,22 +64,52 @@ def signup(request):
             }
   return render (request, 'order_processor/signup.html', context)
 
-@csrf_exempt  
 def successfulsignup(request):
   username = request.POST['username']
   password = request.POST['password']
-  driver = request.POST.get('driver', False) 
-  user = User.objects.create_user(username, "example@example.com", password)
-  if request.method == 'Post'
-    
-    g = Group.objects.get(name='driver')
-    g.user_set.add(user)
-    user.save()
-    HttpResponse("got here")
-    
-  user_list = User.objects.all()
+  email = request.POST['email']
+  first_name = request.POST['first_name']
+  last_name = request.POST['last_name']
+  user = User.objects.create_user(username, email, password)
+  user_list = User.objects.all() 
+  user.last_name = last_name
+  user.first_name = first_name
   context = {
-              'user_list': user_list
+              'username':username,
+              'email':email,
+              'first_name':first_name,
+              'last_name':last_name,
             }
   return render(request, 'order_processor/successfulsignup.html', context)
+
+def successfullogin(request):
+  username = request.POST['username']
+  password = request.POST['password']
+  username = request.POST['username'] 
+  password = request.POST['password']
+  user = authenticate(username=username, password=password)
   
+  if user is not None: 
+    if user.is_active:
+      auth_login(request, user)
+      first_name = request.user.first_name 
+      last_name = request.user.last_name
+      context = {
+              'first_name' : first_name,
+              'last_name' : last_name,
+            }
+      return render(request, 'order_processor/successfullogin.html', context)
+      logged_in = True
+    else:
+      redirect('index')
+  else: 
+    redirect('index')
+
+def alreadyloggedin(request):
+  if request.user.is_authenticated():
+    first_name = request.user.first_name
+    last_name = request.user.last_name
+    return render(request, 'order_processor/alreadyloggedin.html', context)
+  else:
+    context = {}
+    return render(request, 'order_processor/index.html', context)

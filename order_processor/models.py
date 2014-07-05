@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
-class Store(models.Model):
+class City(models.Model):
 
 	city = models.CharField(max_length=255) 
 	description = models.CharField(max_length=255) 
@@ -13,7 +13,6 @@ class Store(models.Model):
 		return self.city	
 
 class Profile(models.Model):
-
 
   user =	models.OneToOneField(User)
   housenumber = models.CharField(max_length=255)
@@ -62,7 +61,7 @@ class Driver(models.Model):
 	# add drivers hours, active or not
  
   user = models.OneToOneField(User)
-  store = models.ForeignKey(Store)	
+  store = models.ForeignKey(City)
   currently_active = models.BooleanField(default=False)
   phone = models.CharField(max_length=255)
 
@@ -82,7 +81,7 @@ class Order(models.Model):
   order = models.TextField()
   status = models.CharField(max_length=255, choices=STATUS_CHOICES, default='q')
   
-  store = models.ForeignKey(Store)
+  store = models.ForeignKey(City)
   driver = models.ForeignKey(Driver)
   date = models.DateTimeField()
   delivered = models.BooleanField(default=False)

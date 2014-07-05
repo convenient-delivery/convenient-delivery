@@ -1,0 +1,6 @@
+{% include "order_processor/header.html" %}
+<form action = "{% url 'successfulsignup' %}" method = "post"> {% csrf_token %}
+  {{ signup.as_p }}
+  <input type = "submit" Value = "Signup" class = "btn btn-lg btn-default"></input>
+</form>
+{% include "order_processor/footer.html" %}

@@ -1,22 +1,7 @@
-{% load static from staticfiles %}
-
-<link rel="stylesheet" href="{% static "css/style.css" %}">
-
-
-
-<div id="title_div" class="floated_left">
-	<h1> Convenient Delivery </h1> 
-</div>
-	
-<div id="login_div">
-	<h2 id="login_header" >Login</h2>
-	<form>
-		Username: <input class="floated_right padded_10_right" type="text" name = "username"><br>
-		Password: <input class="floated_right padded_10_right" type="password" name = "lastname">
-	</form>
-	<form class="centered">
-		<input type="submit" value="Submit">
-	</form>
-</div>
-
-<h1 class="cleared">Please Login to proceed!</h1>
+{% include "order_processor/header.html" %}
+<h3>Please Login below!</h3>
+<form action = "{% url 'successfullogin' %}" method = "post"> {% csrf_token %}
+  {{  authenticationForm.as_p }}
+  <input type = "submit" Value = "Login" class = "btn btn-lg btn-default"></input>
+</form>
+{% include "order_processor/header.html" %}

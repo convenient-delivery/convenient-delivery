@@ -27,9 +27,11 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 #Add admin templates
-TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
-
-
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')] 
+TEMPLATE_CONTEXT_PROCESSORS = (
+                                'django.core.context_processors.request',
+                                'django.contrib.auth.context_processors.auth',
+                              )
 # Application definition
 
 INSTALLED_APPS = (
@@ -41,11 +43,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'order_processor',
-    'registration',
     'polls',
 )
 #Registration settings  
-ACCOUNT_ACTIVATION_DAYS = 7
 
 EMAIL_HOST='smtp.gmail.com'
 
@@ -102,5 +102,5 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
-
+SITE_ID = 1
 STATIC_URL = 'https://convenient-delivery.com/static/'

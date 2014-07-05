@@ -9,7 +9,7 @@ class CitySelect(forms.Form):
   widget = forms.Select(attrs=attrs)
 
   for city in cities:
-      city_choices = city_choices + ((store, store),) #Tuple of tuples for the choices
+      city_choices = city_choices + ((city, city),) #Tuple of tuples for the choices
 
   city = forms.ChoiceField(choices=city_choices, label='', widget=widget)
 

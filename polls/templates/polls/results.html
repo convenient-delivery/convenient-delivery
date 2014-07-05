@@ -1,0 +1,8 @@
+<h1> {{ poll.question }} </h1>
+
+{% for choice in poll.choice_set.all %}
+<h2>{{ choice.choice_text }} {{choice.votes}} </h2></ br>
+{% endfor %}
+<form action="{% url 'polls:index' %}">
+  <input type="submit" value="Go back to Polls">
+</form>

@@ -3,7 +3,11 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+<<<<<<< HEAD
 class City(models.Model):
+=======
+class Store(models.Model):
+>>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
 
 	city = models.CharField(max_length=255) 
 	description = models.CharField(max_length=255) 
@@ -14,6 +18,10 @@ class City(models.Model):
 
 class Profile(models.Model):
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
   user =	models.OneToOneField(User)
   housenumber = models.CharField(max_length=255)
   street = models.CharField(max_length=255)
@@ -61,7 +69,11 @@ class Driver(models.Model):
 	# add drivers hours, active or not
  
   user = models.OneToOneField(User)
+<<<<<<< HEAD
   city = models.ForeignKey(City)
+=======
+  store = models.ForeignKey(Store)	
+>>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
   currently_active = models.BooleanField(default=False)
   phone = models.CharField(max_length=255)
 
@@ -81,7 +93,11 @@ class Order(models.Model):
   order = models.TextField()
   status = models.CharField(max_length=255, choices=STATUS_CHOICES, default='q')
   
+<<<<<<< HEAD
   city = models.ForeignKey(City)
+=======
+  store = models.ForeignKey(Store)
+>>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
   driver = models.ForeignKey(Driver)
   date = models.DateTimeField()
   delivered = models.BooleanField(default=False)

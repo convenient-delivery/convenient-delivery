@@ -1,0 +1,984 @@
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+couldn't chdir to /home/convenient/Django/convenient_delivery: EACCES
+couldn't chdir to /home/convenient/Django/convenient_delivery: EACCES
+couldn't chdir to /home/convenient/Django/convenient_delivery: EACCES
+couldn't chdir to /home/convenient/Django/convenient_delivery: EACCES
+couldn't chdir to /home/convenient/Django/convenient_delivery: EACCES
+couldn't chdir to /home/convenient/Django/convenient_delivery: EACCES
+couldn't chdir to /home/convenient/Django/convenient_delivery: EACCES
+couldn't chdir to /home/convenient/Django/convenient_delivery: EACCES
+couldn't chdir to /home/convenient/Django/convenient_delivery: EACCES
+couldn't chdir to /home/convenient/Django/convenient_delivery: EACCES
+couldn't chdir to /home/convenient/Django/convenient_delivery: EACCES
+couldn't chdir to /home/convenient/Django/convenient_delivery: EACCES
+couldn't chdir to /home/convenient/Django/convenient_delivery: EACCES
+couldn't chdir to /home/convenient/Django/convenient_delivery: EACCES
+couldn't chdir to /home/convenient/Django/convenient_delivery: EACCES
+couldn't chdir to /home/convenient/Django/convenient_delivery: EACCES
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==0.13.4', 'console_scripts', 'gunicorn')()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/wsgiapp.py", line 32, in run
+    WSGIApplication("%prog [OPTIONS] APP_MODULE").run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/app/base.py", line 116, in run
+    Arbiter(self).run()
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 56, in __init__
+    self.setup(app)
+  File "/usr/lib/pymodules/python2.7/gunicorn/arbiter.py", line 87, in setup
+    self.log = self.cfg.logger_class(app.cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 35, in __init__
+    self.setup(cfg)
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 47, in setup
+    logging.Formatter(self.error_fmt, self.datefmt))
+  File "/usr/lib/pymodules/python2.7/gunicorn/glogging.py", line 156, in _set_handler
+    h = logging.FileHandler(output)
+  File "/usr/lib/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 13] Permission denied: '/home/convenient/Django/convenient_delivery/gunicorn/error.log'

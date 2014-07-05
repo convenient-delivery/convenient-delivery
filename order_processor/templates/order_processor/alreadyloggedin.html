@@ -1,0 +1,9 @@
+{% include "order_processor/header.html" %}
+  
+<p> 
+    You're already logged in, {{ first_name }} {{ last_name }}!</ br>
+    <form action = "{% url 'index' %}">{% csrf_token %}
+      <input type = "submit" Value = "Home" class = "btn btn-default btn-large">
+    </form>
+</p>
+{% include "order_processor/footer.html" %}

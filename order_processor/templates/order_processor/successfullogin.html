@@ -1,0 +1,10 @@
+{% include "order_processor/header.html" %}
+  <p>
+    Welcome back {{ first_name }}, {{ last_name }}!</ br>
+    Press the button to go back home!</ br>
+    <form action = "{% url 'order_processor:index' %}">{% csrf_token %}
+      <input type = "submit" Value = "Home" class = "btn btn-default btn-large">
+    </form>
+  </p>
+{% include "order_processor/footer.html" %}
+  

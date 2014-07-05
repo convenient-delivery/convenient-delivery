@@ -1,0 +1,32 @@
+{% load static from staticfiles %}
+
+<link rel="stylesheet" href="{% static "css/style.css" %}">
+
+
+
+<div id="title_div">
+	<h1> Convenient Delivery </h1> 
+</div>
+	
+<div id="login_div">
+	<h2 id="login_header" >Login</h2>
+	<form>
+		Username: <input class="floated_right padded_10_right" type="text" name = "username"><br>
+		Password: <input class="floated_right padded_10_right" type="password" name = "lastname">
+	</form>
+	<form class="centered">
+		<input type="submit" value="Submit">
+	</form>
+</div>
+
+
+<div id = "select_div">
+	<h2  > Please Select your Location Below!</h2>
+	<select id="school_selector">
+		<option value="uconn">UCONN</option>
+	</select>
+	<form class = "centered"  >
+		<input  type="submit" value="Submit">
+	</form>
+</div>
+

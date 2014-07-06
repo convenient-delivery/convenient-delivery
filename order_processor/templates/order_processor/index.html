@@ -3,11 +3,7 @@
 <div class="inner cover">
   <h1 class="cover-heading">Welcome!</h1>
   <p class="lead">Select your Location to begin!</p>
-<<<<<<< HEAD
   <form action="{% url 'order_processor:order' %}" method="post"> {% csrf_token %}
-=======
-  <form action="{% url 'order' %}" method="post"> {% csrf_token %}
->>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
     {{ store_select.as_p }}
     <p class="lead">
       <input type="submit" Value="Begin Order!" class="btn btn-lg btn-default"></input>

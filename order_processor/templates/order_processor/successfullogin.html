@@ -2,11 +2,7 @@
   <p>
     Welcome back {{ first_name }}, {{ last_name }}!</ br>
     Press the button to go back home!</ br>
-<<<<<<< HEAD
     <form action = "{% url 'order_processor:index' %}">{% csrf_token %}
-=======
-    <form action = "{% url 'index' %}">{% csrf_token %}
->>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
       <input type = "submit" Value = "Home" class = "btn btn-default btn-large">
     </form>
   </p>

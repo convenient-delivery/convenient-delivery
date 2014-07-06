@@ -28,17 +28,10 @@
                 <li class="active" style="float:top;"><a href="/">Home</a></li>
                 <li><a href="#">Contact</a></li>
                 {% if user.is_authenticated %}
-<<<<<<< HEAD
                 <li><a href="{% url 'order_processor:logout' %}">Logout</a></li>
                 {% else %}
                 <li><a href="{% url 'order_processor:login' %}">Login</a></li>
                 <li><a href="{% url 'order_processor:signup'%}">Signup</a></li>
-=======
-                <li><a href="{% url 'logout' %}">Logout</a></li>
-                {% else %}
-                <li><a href="{% url 'login' %}">Login</a></li>
-                <li><a href="{% url 'signup'%}">Signup</a></li>
->>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
                 {% endif %}
               </ul>
           </div> <!-- Close masthead clearfix -->

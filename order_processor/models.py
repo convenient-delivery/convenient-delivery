@@ -1,13 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from django.db.models import Sum
+from decimal import *
 # Create your models here.
 
-<<<<<<< HEAD
 class City(models.Model):
-=======
-class Store(models.Model):
->>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
 
 	city = models.CharField(max_length=255) 
 	description = models.CharField(max_length=255) 
@@ -16,52 +13,54 @@ class Store(models.Model):
 	def __unicode__(self):  # Python 3: def __str__(self):
 		return self.city	
 
-class Profile(models.Model):
-
-<<<<<<< HEAD
-=======
-
->>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
-  user =	models.OneToOneField(User)
-  housenumber = models.CharField(max_length=255)
-  street = models.CharField(max_length=255)
-  apt_sweet = models.CharField(max_length=255,blank=True)
-  city = 	models.CharField(max_length=255)
+class Address(models.Model):
+  address_line_1 = models.CharField(max_length=255)
+  address_line_2 = models.CharField(max_length=255, blank = True, null = True)
+  city = models.CharField(max_length=255)
   state = models.CharField(max_length=255)
   zipcode = models.CharField(max_length=255)
-	
-  phone = models.CharField(max_length=255)
 
-	
+  class Category(models.Model):
+    class Meta:
+      verbose_name = "Address"
+
+  def __unicode__(self):
+    return self.address_line_1
+
+class Profile(models.Model):
+
+  user =	models.OneToOneField(User)
+  address = models.ForeignKey(Address, blank = True, null = True)
+  phone = models.CharField(max_length=255)
 
   def __unicode__(self):  # Python 3: def __str__(self):
     return self.user.username
 
-
-class Establishment(models.Model):
-
-  name = models.CharField(max_length=255)
-  address = models.TextField(max_length=255)
-  phone = models.CharField(max_length=255)
+class SaleItem(models.Model):
+ 
+  name = models.CharField(max_length=255)  
+  description = models.CharField(max_length=255)
+  price = models.DecimalField(max_digits=50, decimal_places=2)
+  establishment = models.OneToOneField('Establishment', null = True) #quotes required because model is not defined yet!
+  category = models.OneToOneField('ItemCategory', null = True)
 
   def __unicode__(self):
     return self.name
 
 class ItemCategory(models.Model):
 
-  establishment = models.ForeignKey(Establishment)
   name = models.CharField(max_length=255)
+  establishment = models.OneToOneField('Establishment', null = True) #quotes required because model is not defined yet!
 
   def __unicode__(self):  # Python 3: def __str__(self):
     return self.name
 
-class SaleItem(models.Model):
- 
-  category = models.ForeignKey(ItemCategory)
-  name = models.CharField(max_length=255)  
-  description = models.CharField(max_length=255)
-  price = models.DecimalField(max_digits=50, decimal_places=2)
+class Establishment(models.Model):
 
+  name = models.CharField(max_length=255)
+  address = models.OneToOneField(Address, null = True)
+  phone = models.CharField(max_length=255)
+  
   def __unicode__(self):
     return self.name
 
@@ -69,11 +68,7 @@ class Driver(models.Model):
 	# add drivers hours, active or not
  
   user = models.OneToOneField(User)
-<<<<<<< HEAD
   city = models.ForeignKey(City)
-=======
-  store = models.ForeignKey(Store)	
->>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
   currently_active = models.BooleanField(default=False)
   phone = models.CharField(max_length=255)
 
@@ -88,22 +83,24 @@ class Order(models.Model):
     ('r', 'On Route'),
     ('d', 'Delivered'),
   )
-
-  user = models.ForeignKey(User)
-  order = models.TextField()
-  status = models.CharField(max_length=255, choices=STATUS_CHOICES, default='q')
-  
-<<<<<<< HEAD
+  profile = models.ForeignKey(Profile, null = True)
+  items = models.ManyToManyField(SaleItem, null = True) 
+  status = models.CharField(max_length=255, choices=STATUS_CHOICES, default='q') 
   city = models.ForeignKey(City)
-=======
-  store = models.ForeignKey(Store)
->>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
   driver = models.ForeignKey(Driver)
   date = models.DateTimeField()
   delivered = models.BooleanField(default=False)
   work_required = models.BooleanField(default=False) #This would be true if an order needed to be placed
-
-  cost = models.DecimalField(max_digits=50, decimal_places=2)
+  cost = models.DecimalField(max_digits=50, decimal_places=2, null = True) 
 
   def __unicode__(self):  # Python 3: def __str__(self):
-    return self.username
+    self_order = models.ForeignKey('self')
+    current_city = self.city
+    current_username = self.profile.user.username 
+    name = "CITY / " + current_city.city + " | " + "USERNAME / " + current_username + " | "  
+    items_list = self.items.all()
+    for saleitem in items_list:
+      name = name + "ESTABLISHMENT / " + saleitem.establishment.name + " | "
+    return name 
+    
+ 

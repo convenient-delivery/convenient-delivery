@@ -17,16 +17,22 @@ class Migration(SchemaMigration):
         ))
         db.send_create_signal(u'order_processor', ['City'])
 
+        # Adding model 'Address'
+        db.create_table(u'order_processor_address', (
+            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('address_line_1', self.gf('django.db.models.fields.CharField')(max_length=255)),
+            ('address_line_2', self.gf('django.db.models.fields.CharField')(max_length=255)),
+            ('city', self.gf('django.db.models.fields.CharField')(max_length=255)),
+            ('state', self.gf('django.db.models.fields.CharField')(max_length=255)),
+            ('zipcode', self.gf('django.db.models.fields.CharField')(max_length=255)),
+        ))
+        db.send_create_signal(u'order_processor', ['Address'])
+
         # Adding model 'Profile'
         db.create_table(u'order_processor_profile', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('user', self.gf('django.db.models.fields.related.OneToOneField')(to=orm['auth.User'], unique=True)),
-            ('housenumber', self.gf('django.db.models.fields.CharField')(max_length=255)),
-            ('street', self.gf('django.db.models.fields.CharField')(max_length=255)),
-            ('apt_sweet', self.gf('django.db.models.fields.CharField')(max_length=255, blank=True)),
-            ('city', self.gf('django.db.models.fields.CharField')(max_length=255)),
-            ('state', self.gf('django.db.models.fields.CharField')(max_length=255)),
-            ('zipcode', self.gf('django.db.models.fields.CharField')(max_length=255)),
+            ('address', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['order_processor.Address'], null=True)),
             ('phone', self.gf('django.db.models.fields.CharField')(max_length=255)),
         ))
         db.send_create_signal(u'order_processor', ['Profile'])
@@ -71,7 +77,7 @@ class Migration(SchemaMigration):
         # Adding model 'Order'
         db.create_table(u'order_processor_order', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('user', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['auth.User'])),
+            ('profile', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['order_processor.Profile'])),
             ('order', self.gf('django.db.models.fields.TextField')()),
             ('status', self.gf('django.db.models.fields.CharField')(default='q', max_length=255)),
             ('city', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['order_processor.City'])),
@@ -87,6 +93,9 @@ class Migration(SchemaMigration):
     def backwards(self, orm):
         # Deleting model 'City'
         db.delete_table(u'order_processor_city')
+
+        # Deleting model 'Address'
+        db.delete_table(u'order_processor_address')
 
         # Deleting model 'Profile'
         db.delete_table(u'order_processor_profile')
@@ -144,6 +153,15 @@ class Migration(SchemaMigration):
             'model': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '100'})
         },
+        u'order_processor.address': {
+            'Meta': {'object_name': 'Address'},
+            'address_line_1': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
+            'address_line_2': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
+            'city': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
+            u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'state': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
+            'zipcode': ('django.db.models.fields.CharField', [], {'max_length': '255'})
+        },
         u'order_processor.city': {
             'Meta': {'object_name': 'City'},
             'city': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
@@ -181,21 +199,16 @@ class Migration(SchemaMigration):
             'driver': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['order_processor.Driver']"}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'order': ('django.db.models.fields.TextField', [], {}),
+            'profile': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['order_processor.Profile']"}),
             'status': ('django.db.models.fields.CharField', [], {'default': "'q'", 'max_length': '255'}),
-            'user': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['auth.User']"}),
             'work_required': ('django.db.models.fields.BooleanField', [], {'default': 'False'})
         },
         u'order_processor.profile': {
             'Meta': {'object_name': 'Profile'},
-            'apt_sweet': ('django.db.models.fields.CharField', [], {'max_length': '255', 'blank': 'True'}),
-            'city': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
-            'housenumber': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
+            'address': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['order_processor.Address']", 'null': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'phone': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
-            'state': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
-            'street': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
-            'user': ('django.db.models.fields.related.OneToOneField', [], {'to': u"orm['auth.User']", 'unique': 'True'}),
-            'zipcode': ('django.db.models.fields.CharField', [], {'max_length': '255'})
+            'user': ('django.db.models.fields.related.OneToOneField', [], {'to': u"orm['auth.User']", 'unique': 'True'})
         },
         u'order_processor.saleitem': {
             'Meta': {'object_name': 'SaleItem'},

@@ -1,10 +1,6 @@
 {% include "order_processor/header.html" %}
 <h3>Please Login below!</h3>
-<<<<<<< HEAD
 <form action = "{% url 'order_processor:successfullogin' %}" method = "post"> {% csrf_token %}
-=======
-<form action = "{% url 'successfullogin' %}" method = "post"> {% csrf_token %}
->>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
   {{  authenticationForm.as_p }}
   <input type = "submit" Value = "Login" class = "btn btn-lg btn-default"></input>
 </form>

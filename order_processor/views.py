@@ -2,11 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import RequestContext, loader
-<<<<<<< HEAD
 from order_processor.models import City, Establishment
-=======
-from order_processor.models import Store, Establishment
->>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
 from order_processor import forms
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
@@ -16,19 +12,11 @@ from django.contrib.auth.forms import AuthenticationForm
 def index(request):
   #output = "test output"
   
-<<<<<<< HEAD
   store_selector = forms.CitySelect()
   login = forms.login()
   
   context = {
               'city_select' : store_selector,
-=======
-  store_selector = forms.StoreSelect()
-  login = forms.login()
-  
-  context = {
-              'store_select' : store_selector,
->>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
               'login' : login,
             }
   return render(request, 'order_processor/index.html', context)
@@ -37,11 +25,7 @@ def index(request):
 def order(request):
   context = {}
   if request.method == 'POST':
-<<<<<<< HEAD
     store_selector = forms.CitySelect(request.POST)
-=======
-    store_selector = forms.StoreSelect(request.POST)
->>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
 
   else:
     return redirect('index')  

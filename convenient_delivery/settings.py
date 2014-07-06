@@ -17,11 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
 SECRET_KEY = '8ym8r(%6)d0@&%dqod9*-j)@pd83*qdt&n*k!zg(7+8udco5p2'
-=======
-SECRET_KEY = '1%w*4j8o=rxr!rach=90ch-+2t@+u1p2$*&+@-v=h1ngu*3q!m'
->>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -30,47 +26,19 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
-<<<<<<< HEAD
 
-=======
-#Add admin templates
-TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')] 
-TEMPLATE_CONTEXT_PROCESSORS = (
-                                'django.core.context_processors.request',
-                                'django.contrib.auth.context_processors.auth',
-                              )
->>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
 # Application definition
 
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
-<<<<<<< HEAD
-=======
-    'django.contrib.sites',
->>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
     'south',
     'order_processor',
 )
-=======
-    'order_processor',
-    'polls',
-)
-#Registration settings  
-
-EMAIL_HOST='smtp.gmail.com'
-
-EMAIL_PORT = '465'
-
-EMAIL_HOST_USER = 'convenientdelivery132'
-
-EMAIL_HOST_PASSWORD = 'hello132'
->>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -93,15 +61,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'con0del',
-<<<<<<< HEAD
   'USER': 'con0del',
   'HOST': 'con0del.db.12105689.hostedresource.com',
   'PASSWORD': 'craZyP4ssw0rd!',
-=======
-	'USER': 'con0del', 
-	'HOST': 'con0del.db.12105689.hostedresource.com',
-	'PASSWORD' : 'craZyP4ssw0rd!',
->>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
     }
 }
 
@@ -110,11 +72,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-<<<<<<< HEAD
 TIME_ZONE = 'US'
-=======
-TIME_ZONE = 'EST'
->>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
 
 USE_I18N = True
 
@@ -122,19 +80,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-<<<<<<< HEAD
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-=======
-#Security Settings
-#SESSION_COOKIE_SECURE = True
-#CSRF_COOKIE_SECURE = True
-#SESSION_EXPIRE_AT_BROWSER_CLOSE=True
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.6/howto/static-files/
-SITE_ID = 1
->>>>>>> e275d7d2b3c79b61a4b81fef6bdf1ccdc822e1a1
 STATIC_URL = 'https://convenient-delivery.com/static/'

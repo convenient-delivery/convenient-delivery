@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import RequestContext, loader
-from order_processor.models import City, Establishment
+from order_processor.models import *
 from order_processor import forms
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
@@ -14,6 +14,7 @@ def index(request):
   
   store_selector = forms.CitySelect()
   login = forms.login()
+  
   
   context = {
               'city_select' : store_selector,
@@ -113,3 +114,28 @@ def alreadyloggedin(request):
   else:
     context = {}
     return render(request, 'order_processor/index.html', context)
+
+def driver(request):
+  user = request.user  
+  if user.groups.filter(name="driver").count():
+    driver = Driver.objects.all().filter(user = user)
+    order_list = Order.objects.all().filter(status = 'q').filter(driver = driver) 
+    context = {
+              'order_list' : order_list,
+              }
+    return render(request, 'order_processor/driver.html', context)
+  else:
+    HttpResponse("You can't be here silly!")
+    
+
+
+
+
+
+
+
+
+
+
+
+

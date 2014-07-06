@@ -10,5 +10,5 @@ urlpatterns = patterns('',
       url(r'^signup/', views.signup, name='signup'),
       url(r'^successfulsignup/', views.successfulsignup, name='successfulsignup'),
       url(r'^successfullogin/', views.successfullogin, name='successfullogin'),
-#      url(r'^driver/', views.driver, name='driver'),
+      url(r'^driver/', views.driver, name='driver'),
 )

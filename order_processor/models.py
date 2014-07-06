@@ -45,7 +45,8 @@ class SaleItem(models.Model):
   category = models.OneToOneField('ItemCategory', null = True)
 
   def __unicode__(self):
-    return self.name
+    display_name = self.establishment.name + " | " + self.name + " | " + str(self.price) 
+    return display_name 
 
 class ItemCategory(models.Model):
 
@@ -92,15 +93,22 @@ class Order(models.Model):
   delivered = models.BooleanField(default=False)
   work_required = models.BooleanField(default=False) #This would be true if an order needed to be placed
   cost = models.DecimalField(max_digits=50, decimal_places=2, null = True) 
+  establishment = models.ManyToManyField(Establishment)
+  def costCalc(self):
+    cost = Decimal(0.00)
+    items_list = self.items.all()
+    for saleitem in items_list:
+      cost = cost + saleitem.price
+    queryset.update(self__cost = cost)
 
   def __unicode__(self):  # Python 3: def __str__(self):
     self_order = models.ForeignKey('self')
     current_city = self.city
     current_username = self.profile.user.username 
     name = "CITY / " + current_city.city + " | " + "USERNAME / " + current_username + " | "  
-    items_list = self.items.all()
-    for saleitem in items_list:
-      name = name + "ESTABLISHMENT / " + saleitem.establishment.name + " | "
+    for establishment in self.establishment.all():
+      name = name + "ESTABLISHMENT / " + establishment.name + " | "
     return name 
+
     
  

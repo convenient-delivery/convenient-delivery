@@ -40,7 +40,6 @@ admin.site.unregister(User)
 # register new user admin
 admin.site.register(User, UserAdmin)
 """
-
 # Register your models here.
 admin.site.register(City)
 admin.site.register(Profile)

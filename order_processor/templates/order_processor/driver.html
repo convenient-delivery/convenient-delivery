@@ -1,3 +1,9 @@
 {% include "order_processor/header.html" %}
-test
+{% if order_list %}
+  <ul>
+    {% for order in order_list %}
+      <li>{{ order.profile.user.username }} | {{ order.city.city }} </li>
+    {% endfor %}
+  </ul>
+{% endif %}
 {% include "order_processor/footer.html" %}

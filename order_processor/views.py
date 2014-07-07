@@ -8,26 +8,33 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.contrib.auth.models import User, Group
 from django.contrib.auth.forms import AuthenticationForm
+from django.forms import ModelChoiceField
 
 def index(request):
   #output = "test output"
   
-  store_selector = forms.CitySelect()
+  city_selector = forms.CitySelect()
   login = forms.login()
   
   
   context = {
-              'city_select' : store_selector,
+              'city_select' : city_selector,
               'login' : login,
             }
   return render(request, 'order_processor/index.html', context)
 
 
-def order(request):
-  context = {}
+def new_order(request):
   if request.method == 'POST':
-    store_selector = forms.CitySelect(request.POST)
-
+    current_city =  request.POST['city'] 
+    establishment_list = Establishment.objects.all().filter(city = current_city)
+    
+    establishment_selector = forms.EstablishmentSelect(establishment_list = establishment_list)
+     
+    context = {
+              'establishment_selector' : establishment_selector,
+              }
+    return render(request, 'order_processor/new_order.html', context)
   else:
     return redirect('index')  
   
@@ -126,9 +133,22 @@ def driver(request):
     return render(request, 'order_processor/driver.html', context)
   else:
     HttpResponse("You can't be here silly!")
-    
 
-
+def order_details(request, order_id):
+  order = Order.objects.all().get(id = order_id)    
+  username = order.profile.user.username
+  item_list = order.items.all()
+  cost = str(order.cost)
+  establishment_list = order.establishment
+  
+  context = {
+            'order' :order, 
+            'username' : username,
+            'item_list' : item_list,
+            'cost' : cost,
+            'establishment_list': establishment_list,
+            }
+  return render(request, 'order_processor/order_details.html', context)
 
 
 

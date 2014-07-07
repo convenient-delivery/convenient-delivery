@@ -2,7 +2,7 @@
 {% if order_list %}
   <ul>
     {% for order in order_list %}
-      <li>{{ order.profile.user.username }} | {{ order.city.city }} </li>
+      <li><a href = "{% url 'order_processor:order_details' order.id %}">{{ order.profile.user.username }} | {{ order.city.city }}</a></li>
     {% endfor %}
   </ul>
 {% endif %}

@@ -55,6 +55,7 @@ body {
 /* Padding for spacing */
 .inner {
   padding: 30px;
+  text-align:center;
 }
 
 
@@ -164,4 +165,11 @@ added by matt king
   .cover-container {
     width: 700px;
   }
+}
+/*
+* King's custom stuff
+*/
+
+.centered {
+  text-align: center;
 }

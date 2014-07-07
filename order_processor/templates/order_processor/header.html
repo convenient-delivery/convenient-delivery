@@ -25,7 +25,7 @@
           <div class="masthead clearfix">
               <h3 class="masthead-brand">Convenient Delivery</h3>
               <ul class = "nav masthead-nav">
-                <li class="active" style="float:top;"><a href="/">Home</a></li>
+                <li class="active" ><a href="/">Home</a></li>
                 <li><a href="#">Contact</a></li>
                 {% if user.is_authenticated %}
                 <li><a href="{% url 'order_processor:logout' %}">Logout</a></li>

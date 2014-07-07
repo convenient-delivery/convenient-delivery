@@ -1,0 +1,21 @@
+{% include 'order_processor/header.html' %}
+  
+  <ul>
+    <li>ID = {{ order.id }}</li>
+      <ul>
+        <li>{{ username }}</li>
+          {% if item_list %}
+            <ul>
+              <li>Items</li>
+                <ul>
+                  {% for item in item_list %}
+                    <li>{{ item.name }} | {{ item.establishment.name }}</li>
+                  {% endfor %}
+                </ul>
+            </ul>
+          {% endif %}
+        <li> {{ cost }}</li>
+      </ul>
+  </ul>
+          
+{% include 'order_processor/footer.html' %}

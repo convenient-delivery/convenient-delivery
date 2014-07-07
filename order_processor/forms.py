@@ -1,17 +1,20 @@
 from django import forms
-from order_processor import models
+from order_processor.models import *
 
 class CitySelect(forms.Form):
-  cities = models.City.objects.all() 
-  city_choices = ()
+  cities = City.objects.all() 
 
   attrs = {'class' : 'selectpicker show-menu-arrow', 'data-width' : 'auto'}
   widget = forms.Select(attrs=attrs)
 
-  for city in cities:
-      city_choices = city_choices + ((city, city),) #Tuple of tuples for the choices
 
-  city = forms.ChoiceField(choices=city_choices, label='', widget=widget)
+  city = forms.ModelChoiceField(queryset = cities, label='', widget=widget, empty_label = None)
+
+class EstablishmentSelect(forms.Form):
+  def __init__(self, *args, **kwargs):
+    establishment_list = kwargs.pop('establishment_list')
+    super(EstablishmentSelect, self).__init__(*args, **kwargs)
+    self.fields['establishment'] = forms.ModelChoiceField(queryset = establishment_list, empty_label = None)
 
 class login(forms.Form):
   username = forms.CharField(max_length = 100, widget = forms.TextInput(attrs={'color': 'black'}))

@@ -1,0 +1,7 @@
+{% include "order_processor/header.html" %}
+  <form action = "{% url 'order_processor:index' %}" method = "post"> {% csrf_token %}
+    {{ establishment_selector.as_p }}
+    <input type = "submit" value = "Complete Order!" class = "btn btn-lg btn-default"></input>
+  </form>
+{% include "order_processor/footer.html" %}
+

@@ -57,7 +57,8 @@ class ItemCategory(models.Model):
     return self.name
 
 class Establishment(models.Model):
-
+  
+  city = models.ForeignKey(City, null = True)
   name = models.CharField(max_length=255)
   address = models.OneToOneField(Address, null = True)
   phone = models.CharField(max_length=255)
@@ -92,15 +93,17 @@ class Order(models.Model):
   date = models.DateTimeField()
   delivered = models.BooleanField(default=False)
   work_required = models.BooleanField(default=False) #This would be true if an order needed to be placed
-  cost = models.DecimalField(max_digits=50, decimal_places=2, null = True) 
   establishment = models.ManyToManyField(Establishment)
-  def costCalc(self):
-    cost = Decimal(0.00)
+  
+  def _cost(self):
+    x = Decimal(0)
     items_list = self.items.all()
-    for saleitem in items_list:
-      cost = cost + saleitem.price
-    queryset.update(self__cost = cost)
+    for item in items_list:
+      x =  x + item.price
+    return x
 
+  cost = property(_cost)
+  
   def __unicode__(self):  # Python 3: def __str__(self):
     self_order = models.ForeignKey('self')
     current_city = self.city
@@ -109,6 +112,3 @@ class Order(models.Model):
     for establishment in self.establishment.all():
       name = name + "ESTABLISHMENT / " + establishment.name + " | "
     return name 
-
-    
- 

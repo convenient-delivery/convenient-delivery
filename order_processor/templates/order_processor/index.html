@@ -1,12 +1,12 @@
-{% include "order_processor/header.html" %}
+{% include "order_processor/header.html" %} 
 
 <div class="inner cover">
   <h1 class="cover-heading">Welcome!</h1>
   <p class="lead">Select your Location to begin!</p>
-  <form action="{% url 'order_processor:order' %}" method="post"> {% csrf_token %}
-    {{ store_select.as_p }}
+  <form  action="{% url 'order_processor:new_order' %}" method="post"> {% csrf_token %}
+    {{ city_select.as_p }}
     <p class="lead">
-      <input type="submit" Value="Begin Order!" class="btn btn-lg btn-default"></input>
+      <input  type="submit" Value="Begin Order!" class="btn btn-lg btn-default"></input>
     </p>
   </form>  
 </div>
